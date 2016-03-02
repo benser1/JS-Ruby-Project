@@ -1,4 +1,3 @@
-
 <% @user.posts.each do |post| %>
 <ul>
   <li><%= link_to post.title, user_post_path(@user, post)%></li>
