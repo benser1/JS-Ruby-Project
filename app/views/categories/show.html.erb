@@ -1,9 +1,24 @@
-
+<h1>Test</h1>
 <h3>Category Name: <em><%= @category.name %></em> </h3>
 <%= @category.posts.count %> post(s):
 
 <% @category.posts.each do |post| %>
 <ul>
   <li><%= link_to post.title, user_post_path(User.find_by_id(post.user_id), post) %></li>
+  <div id="body-<%= post.id %>"><%= truncate post.content %></div>
+  <button class="js-more" data-id="<%= post.id %>">More...</button>
 </ul>
 <% end %>
+
+ 
+<script type="text/javascript" charset="utf-8">
+$(function () {
+  $(".js-more").click(function() {
+
+    var id = $(this).data("id");
+    $.get("/posts/" + id + "/body", function(data) {
+      $('#body-' + id).text(data);
+    });
+  });
+});
+</script>
