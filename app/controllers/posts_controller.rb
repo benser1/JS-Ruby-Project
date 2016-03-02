@@ -9,6 +9,11 @@ class PostsController < ApplicationController
     @post = Post.new
   end
 
+  def body 
+    params_id
+    render plain: @post.content
+  end
+
   def create
       @post = Post.new(post_params)
       @post.user_id = current_user.id 

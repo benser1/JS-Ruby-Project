@@ -8,6 +8,8 @@ Rails.application.routes.draw do
     resources :posts, only: [:show, :index, :new, :edit, :create, :update, :destroy]
   end
 
+  get '/posts/:id/body', to: 'posts#body'
+
   root 'welcome#home'
 
 end ## routes end

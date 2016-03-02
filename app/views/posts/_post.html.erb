@@ -1,0 +1,9 @@
+<h1><%if @user.name != nil %><%=@user.name%><%else%><%=@user.email%><%end%> Blog Posts:</h1>
+
+<% @user.posts.each do |post| %>
+<ul>
+  <li><%= link_to post.title, user_post_path(@user, post)%></li>
+  <div id="body-<%= post.id %>"><%= truncate post.content %></div>
+  <button class="js-more" data-id="<%= post.id %>">More...</button>
+  </ul>
+<% end %>
