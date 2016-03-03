@@ -1,8 +1,21 @@
-
+<ul class="circle" id="myList">
 <% @user.posts.each do |post| %>
-  <ul class="circle">
-  <li><%= link_to post.title, user_post_path(@user, post), :class => "redHover"%></li>
-  <div id="body-<%= post.id %>"><%= truncate post.content %></div>
-  <button class="js-more" data-id="<%= post.id %>">More...</button>
-  </ul>
-<% end %>
+    <li><%= link_to post.title, user_post_path(@user, post), :class => "redHover"%>
+    <div id="body-<%= post.id %>"><%= truncate post.content %></div>
+    <button class="js-more" data-id="<%= post.id %>">More...</button><br></li>
+<br><% end %>
+</ul>
+
+<div id="loadMore">Load More</div>
+
+<script type="text/javascript">
+$(document).ready(function () {
+  size_li = $("#myList li").size();
+  x=2;
+  $('#myList li:lt('+x+')').show();
+  $('#loadMore').click(function () {
+    x= (x+2 <= size_li) ? x+2 : size_li;
+    $('#myList li:lt('+x+')').show();
+  });
+});
+</script>

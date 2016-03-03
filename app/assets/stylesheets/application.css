@@ -74,10 +74,27 @@ background: linear-gradient(to left, #757F9A , #D7DDE8); /* W3C, IE 10+/ Edge, F
   border: 2px solid #948E99;
 }
 
+
+/*  Admin Only Links   */
 .adminLink:hover {
   color: green;
 }
 
+
+/*   Load More List    */
+
+#myList li{
+  display: none;
+}
+
+#loadMore {
+  color: green;
+  cursor: pointer;
+}
+
+#loadMore:hover {
+  color: black;
+}
 
 
 

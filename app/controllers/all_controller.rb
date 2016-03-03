@@ -3,8 +3,7 @@ class AllController < ApplicationController
   helper_method :sort_column,  :sort_direction
 
   def index
-    @posts = Post.order(sort_column + " " + sort_direction) 
-    @posts = Post.order(updated_at: :desc).page(params[:page])
+    @posts = Post.order(sort_column + " " + sort_direction).page(params[:page])
   end
 
   def destroy
