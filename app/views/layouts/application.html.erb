@@ -4,6 +4,7 @@
   <title>BlogRailsFinal</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
   <%= csrf_meta_tags %>
 </head>
 <body>
@@ -13,9 +14,11 @@
    <%= content_tag(:div, flash[:notice], :id => "flash_notice") if flash[:notice] %>
    <%= content_tag(:div, flash[:alert], :id => "flash_alert") if flash[:alert] %>
    <% if user_signed_in? %>
-   <%= link_to("Home", user_path(current_user)) %> -
-   <%= link_to "View Categories", categories_path %> -
-   <%= link_to("Log Out", destroy_user_session_path, :method => :delete) %> 
+   <div id="navbar">
+   <%= link_to "Home", user_path(current_user), {:class => "nav_btn"} %> -
+   <%= link_to "View Categories", categories_path, {:class => "nav_btn"} %> -
+   <%= link_to "Log Out", destroy_user_session_path, :class => "nav_btn", :method => :delete %> 
+   </div>
   <% end %>
    
 

@@ -14,4 +14,16 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+//= require bootstrap-sprockets
 
+$(document).ready(function(){
+    navHover();
+});
+
+function navHover() {
+  $(".nav_btn").hover(function(){
+        $(this).css("background-color", "#134E5E");
+        }, function(){
+        $(this).css("background-color", "#71B280");
+    });
+}

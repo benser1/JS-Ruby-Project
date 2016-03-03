@@ -1,6 +1,6 @@
 <h2>Category: <em><%= @category.name %></em> </h2>
-<%= page_entries_info @posts %>
-<%= paginate @posts %>
+<%= page_entries_info @posts %><br>
+<br><%= paginate @posts %>
 
 
 <% @posts.each do |post| %>

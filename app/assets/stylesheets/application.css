@@ -13,3 +13,69 @@
  *= require_tree .
  *= require_self
  */
+
+
+ /*    NAV BAR        */
+ 
+#navbar {
+background: #283048; /* fallback for old browsers */
+background: -webkit-linear-gradient(to left, #283048 , #859398); /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to left, #283048 , #859398); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+height: 100px;
+
+font-size: 25px;
+
+
+display: -webkit-flex; /* Safari */
+    -webkit-align-items: center; /* Safari 7.0+ */
+    display: flex;
+    align-items: center;
+      
+}
+
+.nav_btn {
+  border: 2px solid;
+  border-radius: 2px;
+  padding: 2px;
+  text-decoration: none;
+}
+
+/*   END NAV BAR   */
+
+body {
+  background-color: 
+
+background: #757F9A; /* fallback for old browsers */
+background: -webkit-linear-gradient(to left, #757F9A , #D7DDE8); /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to left, #757F9A , #D7DDE8); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        
+}
+
+/* Index Page List */
+
+ul.circle {
+  list-style-type: circle;
+}
+
+/* Index Page list hover color */
+
+.indexLink:hover {
+  color: #EB3349;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
