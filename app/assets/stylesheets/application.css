@@ -88,12 +88,18 @@ background: linear-gradient(to left, #757F9A , #D7DDE8); /* W3C, IE 10+/ Edge, F
 }
 
 #loadMore {
-  color: green;
+  color: black;
   cursor: pointer;
+  border: 2px solid black;
+  display: inline-block;
+  font-size: 25px;
+  border-radius: 6px;
+  padding: 2px;
+  background-color: #83a4d4;
 }
 
 #loadMore:hover {
-  color: black;
+  color: red;
 }
 
 
