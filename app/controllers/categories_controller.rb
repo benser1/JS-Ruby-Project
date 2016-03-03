@@ -6,7 +6,6 @@ class CategoriesController < ApplicationController
 
   def show
     cat_id
-    @posts = Post.order(updated_at: :desc).page(params[:page])
   end
 
   def new

@@ -1,7 +1,7 @@
 <%= form_for @post.comments.build do |f| %>
 
-   <strong><%= f.label "Name:" %></strong><br>
-   <%= f.text_field :name, required: true %><br><br>
+   
+   <%= f.hidden_field :name %>
 
    <%= f.hidden_field :post_id %>
    <strong><%= f.label "Comment:" %></strong><br>

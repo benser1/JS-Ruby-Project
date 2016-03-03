@@ -39,6 +39,8 @@ display: -webkit-flex; /* Safari */
   border-radius: 2px;
   padding: 2px;
   text-decoration: none;
+  /*background-color: ;*/
+  color: navy;
 }
 
 /*   END NAV BAR   */
@@ -54,14 +56,26 @@ background: linear-gradient(to left, #757F9A , #D7DDE8); /* W3C, IE 10+/ Edge, F
 
 /* Index Page List */
 
-ul.circle {
+.circle {
   list-style-type: circle;
 }
 
 /* Index Page list hover color */
 
-.indexLink:hover {
+.redHover:hover {
   color: #EB3349;
+}
+
+/*  Create New Blog Post content box */
+
+.content_box {
+  background-color: #eef2f3;
+  color: black;
+  border: 2px solid #948E99;
+}
+
+.adminLink:hover {
+  color: green;
 }
 
 

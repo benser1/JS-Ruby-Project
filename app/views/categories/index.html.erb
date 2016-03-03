@@ -1,12 +1,12 @@
-<h2>Categories</h2>
+<h1>Categories</h1>
 <%= page_entries_info @categories %>
 <%= paginate @categories %>
 
 <% @categories.each do |category| %>
-<ul>
-  <li><h4><%= link_to category.name, category_path(category) %></h4><% if current_user.admin? %>
-  <%= link_to "Delete", category, method: :delete, data: { confirm: "Are you sure you want to delete this category?" } %> - 
-  <%= link_to "Edit", edit_category_path(category.id) %><br>
+<ul class="circle">
+  <li><h3><%= link_to category.name, category_path(category), :class => "redHover" %></h3><% if current_user.admin? %>
+  <%= link_to "Delete", category, method: :delete, data: { confirm: "Are you sure you want to delete this category?" }, :class => "adminLink" %> - 
+  <%= link_to "Edit", edit_category_path(category.id), :class => "adminLink" %><br>
   --------------------------
 <% end %></li>
 </ul>

@@ -1,13 +1,13 @@
    <h1>Welcome, <%if current_user.name != nil %><%=current_user.name%><%else%><%=current_user.email%><%end%>!</h1>
    <ul class="circle">
-     <li><h4><%= link_to "View Your Posts", user_posts_path(@user.id), :class => "indexLink" %></h4></li>
-     <li><h4><%= link_to "New Post", new_user_post_path(current_user), :class => "indexLink" %></h4></li>
-     <li><h4><%= link_to "View Categories", categories_path, :class => "indexLink" %>  </h4></li>
-     <li><h4><%= link_to "View All Posts", all_index_path, :class => "indexLink" %>
-     <li><h4><%= link_to "Edit Account", edit_user_registration_path, :class => "indexLink" %></h4></li>
+     <li><h4><%= link_to "View Your Posts", user_posts_path(@user.id), :class => "redHover" %></h4></li>
+     <li><h4><%= link_to "New Post", new_user_post_path(current_user), :class => "redHover" %></h4></li>
+     <li><h4><%= link_to "View Categories", categories_path, :class => "redHover" %>  </h4></li>
+     <li><h4><%= link_to "View All Posts", all_index_path, :class => "redHover" %>
+     <li><h4><%= link_to "Edit Account", edit_user_registration_path, :class => "redHover" %></h4></li>
     </ul>
 <% if current_user.admin? %>
 <ul class="cirlce">
- <li> <h4><%= link_to "Create Category", new_category_path, :class => "indexLink" %><br></h4></li>
+ <li> <h4><%= link_to "Create Category", new_category_path, :class => "redHover" %><br></h4></li>
 </ul>
 <% end %>

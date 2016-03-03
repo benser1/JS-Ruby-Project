@@ -3,7 +3,6 @@ class PostsController < ApplicationController
 
   def index
     @user = User.find(params[:user_id])
-    @posts = Post.order(updated_at: :desc).page(params[:page])
   end
 
   def new
