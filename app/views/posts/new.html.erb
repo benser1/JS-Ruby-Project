@@ -14,3 +14,28 @@
   <br><%= f.submit %>
 
 <% end %>
+
+ <div id="postResult">
+  <h3 id="postTitle"></h3>
+  <p id="postContent"></p>
+  <p id="postCategory"></p>
+ </div>
+
+<script type="text/javascript" charset="utf-8">
+$(function() {
+  $('form').submit(function(event) {
+    event.preventDefault();
+
+    var values = $(this).serialize();
+
+    var posting = $.post("/users/:id/posts", values);
+
+    posting.done(function(data){
+      var post = data["post"];
+      $("#postTitle").text(post["title"]);
+      $("#postContent").text(post["content"]);
+      $("#postCategory").text(post["category_id"]);
+    });
+  });
+});
+</script>

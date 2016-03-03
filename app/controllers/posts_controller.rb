@@ -20,7 +20,7 @@ class PostsController < ApplicationController
       @post.category_id = params[:category_id]
       @post.save
 
-      redirect_to user_posts_path(current_user)
+      render json: @post, status: 201
   end
 
   def edit
