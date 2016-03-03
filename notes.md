@@ -8,7 +8,9 @@
 
 - JSON showing up at this link http://localhost:3000/users/2/posts/1.json
 
+- Put "creat post" on "view my posts" page
 
+- Add number of posts count to user index page
 
 
 
