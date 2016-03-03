@@ -2,8 +2,8 @@ class PostsController < ApplicationController
   load_and_authorize_resource
 
   def index
-    @posts = Post.order(updated_at: :desc).page(params[:page])
     @user = User.find(params[:user_id])
+    @posts = Post.order(updated_at: :desc).page(params[:page])
   end
 
   def new

@@ -1,7 +1,9 @@
 <h2>Category: <em><%= @category.name %></em> </h2>
-<%= @category.posts.count %> post(s):
+<%= page_entries_info @posts %>
+<%= paginate @posts %>
 
-<% @category.posts.each do |post| %>
+
+<% @posts.each do |post| %>
 <ul>
   <li><%= link_to post.title, user_post_path(User.find_by_id(post.user_id), post) %></li>
   <div id="body-<%= post.id %>"><%= truncate post.content %></div>
