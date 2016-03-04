@@ -6,6 +6,10 @@
 - Put "create post" on "view my posts" page
 
 
+- Maybe add some .click features ?
+
+
+
 
 
 
