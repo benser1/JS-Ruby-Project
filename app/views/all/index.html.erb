@@ -2,7 +2,8 @@
 <%= page_entries_info @posts %><br>
 <br><%= paginate @posts %>
 
-<table class ="pretty">
+<div class="allPostsTable">
+<table>
   <tr>
     <th><h2><%= sortable "title" %></h2></th>
     <th><h2><%= sortable "updated_at", "Date" %></h2></th>
@@ -12,15 +13,16 @@
   <% @posts.each do |post| %>
 <tr>
     
-    <td><%= link_to post.title, user_post_path(User.find_by_id(post.user_id), post) %>&nbsp&nbsp&nbsp&nbsp</td>
-    <td>&nbsp&nbsp&nbsp&nbsp<%= last_updated post %>&nbsp&nbsp&nbsp&nbsp</td>
+    <td><%= link_to post.title, user_post_path(User.find_by_id(post.user_id), post), :class => "green" %></td>
+    <td><%= last_updated post %></td>
      <% if post.user.name != nil %>
-    <td>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<%= post.user.name %>&nbsp&nbsp&nbsp&nbsp</td>
+    <td><%= post.user.name %></td>
     <% else %>
-      <td>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<%= post.user.email %></td>
+      <td><%= post.user.email %></td>
     <% end %>
     
 </tr>
 <% end %>
 </table>
+</div>
 
