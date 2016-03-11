@@ -1,6 +1,6 @@
 <ul class="circle" id="myList">
 <% @user.posts.each do |post| %>
-    <li><%= link_to post.title, user_post_path(@user, post), :class => "redHover"%>
+    <li><%= link_to post.title, post_path(post), :class => "redHover"%>
     <div id="body-<%= post.id %>"><%= truncate post.content %></div>
     <button class="js-more" data-id="<%= post.id %>">More...</button><br></li>
 <br><% end %>

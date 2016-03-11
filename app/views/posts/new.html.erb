@@ -1,15 +1,16 @@
 <h1>Create New Blog Post</h1>
 
-<%= form_for [current_user, @post] do |f| %>
-
-  <%= f.label "Title:" %><br />
-  <%= f.text_field :title, :required => true, :class => "content_box" %><br>
+<%= form_for @post do |f| %>
+  <%= f.label "Title:" %><br >
+  <%= f.text_field :title, :required => true %><br>
 
   <br><%= f.label "Write content below:" %><br>
-  <%= f.text_area :content, :required => true, :cols => "50", :rows => "10", :class => "content_box" %> <br>
+  <%= f.text_area :content, :required => true, :cols => "50", :rows => "10" %> <br>
 
   <br><%= f.label "Category:" %><br>
-  <%= select_tag :category_id, options_from_collection_for_select(Category.all, :id, :name), :class => "content_box" %> <br>
+  <%= select_tag :category_id, options_from_collection_for_select(Category.all, :id, :name) %> <br>
+  
+  <!-- Nest to create a new category -->
 
   <br><%= f.submit %>
 

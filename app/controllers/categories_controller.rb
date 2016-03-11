@@ -1,7 +1,7 @@
 class CategoriesController < ApplicationController
 
   def index
-    @categories = Category.order(updated_at: :desc).page(params[:page])
+    @categories = Category.all 
   end
 
   def show
@@ -44,9 +44,5 @@ class CategoriesController < ApplicationController
  def cat_id
    @category = Category.find(params[:id])
  end
-
-
-
-
 
 end ## class end

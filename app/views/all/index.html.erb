@@ -15,12 +15,7 @@
     
     <td><%= link_to post.title, user_post_path(User.find_by_id(post.user_id), post), :class => "green" %></td>
     <td><%= last_updated post %></td>
-     <% if post.user.name != nil %>
     <td><%= post.user.name %></td>
-    <% else %>
-      <td><%= post.user.email %></td>
-    <% end %>
-    
 </tr>
 <% end %>
 </table>

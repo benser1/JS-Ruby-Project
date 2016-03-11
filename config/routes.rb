@@ -1,11 +1,12 @@
 Rails.application.routes.draw do
  
-  resources :categories
+  resources :categories #=> [7, :create, :show, :index, :edit, :new, :update, :destroy]
   resources :all, only: [:index]
-  resources :comments
   devise_for :users, :controllers => { :omniauth_callbacks => "callbacks" }
-  resources :users, only: [:show] do 
-    resources :posts, only: [:show, :index, :new, :edit, :create, :update, :destroy]
+
+  resources :users, only: [:show] 
+  resources :posts do
+    resources :comments
   end
 
   get '/posts/:id/body', to: 'posts#body'

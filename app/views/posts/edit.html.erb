@@ -1,6 +1,6 @@
 <h1>Edit <%= @post.title %> Post</h1>
 
-<%= form_for([@post.user, @post], method: :put) do |f| %>
+<%= form_for(@post, method: :put) do |f| %>
 
   <%= f.label "Title:" %><br />
   <%= f.text_field :title, :required => true %><br><br>
