@@ -11,8 +11,7 @@
   </tr>
 
   <% @posts.each do |post| %>
-<tr>
-    
+<tr>    
     <td><%= link_to post.title, post_path(post), :class => "green" %></td>
     <td><%= last_updated post %></td>
     <td><%= post.user.name %></td>

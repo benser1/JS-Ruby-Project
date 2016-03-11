@@ -1,16 +1,18 @@
 
 <%= form_for @post do |f| %>
 
-  <%= f.label "Title:" %><br />
-  <%= f.text_field :title, :required => true %><br><br>
+  <%= f.label "Title:" %><br >
+  <%= f.text_field :title, :required => true, :class => "content_box" %><br>
 
   <br><%= f.label "Write content below:" %><br>
-  <%= f.text_area :content, :required => true, :cols => "50", :rows => "10" %> <br>
+  <%= f.text_area :content, :required => true, :cols => "50", :rows => "10", :class => "content_box" %> <br>
 
-  <%= f.label "Category:" %><br>
-<%= select_tag :category_id, options_from_collection_for_select(Category.all, :id, :name) %> <br>
+  <br><%= f.label "Category:" %><br>
+  <%= select_tag :category_id, options_from_collection_for_select(Category.all, :id, :name), :class => "content_box" %> <br>
+  
+  <!-- Nest to create a new category -->
 
-  <br><%= f.submit %>
+  <br><%= f.submit :class => "btn btn-success" %>
 
 <% end %>
 

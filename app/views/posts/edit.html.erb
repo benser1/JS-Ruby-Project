@@ -1,16 +1,3 @@
 <h1>Edit <%= @post.title %> Post</h1>
 
-<%= form_for(@post, method: :put) do |f| %>
-
-  <%= f.label "Title:" %><br />
-  <%= f.text_field :title, :required => true %><br><br>
-
-  <br><%= f.label "Write content below:" %><br>
-  <%= f.text_area :content, :required => true, :cols => "50", :rows => "10" %> <br>
-
-  <%= f.label "Category:" %><br>
-  <%= select_tag [:category_id], options_from_collection_for_select(Category.all, :id, :name, @post.category_id) %> <br>
-
-  <br><%= f.submit %>
-
-<% end %>
+<%= render partial: "form", locals: {post: @post} %>

@@ -16,6 +16,10 @@
 
 
  /*    NAV BAR        */
+
+ .js-more:hover {
+  background-color: green;
+ }
  
 #navbar {
 background: #283048; /* fallback for old browsers */
@@ -92,7 +96,7 @@ background: linear-gradient(to left, #757F9A , #D7DDE8); /* W3C, IE 10+/ Edge, F
   display: none;
 }
 
-#loadMore {
+/*#loadMore {
   color: black;
   cursor: pointer;
   border: 2px solid black;
@@ -105,7 +109,7 @@ background: linear-gradient(to left, #757F9A , #D7DDE8); /* W3C, IE 10+/ Edge, F
 
 #loadMore:hover {
   color: red;
-}
+}*/
 
 /*    ALL POSTS TABLE   */
 
