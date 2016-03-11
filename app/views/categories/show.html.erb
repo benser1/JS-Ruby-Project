@@ -3,7 +3,7 @@
 <% @category.posts.each do |post| %>
 
 <ul>
-  <li><%= link_to post.title, user_post_path(User.find_by_id(post.user_id), post) %></li>
+  <li><%= link_to post.title, post_path(post) %></li>
   <div id="body-<%= post.id %>"><%= truncate post.content %></div>
   <button class="js-more" data-id="<%= post.id %>">More...</button>
 </ul>

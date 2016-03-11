@@ -1,4 +1,4 @@
-   <h1>Welcome, <% current_user.name %>!</h1>
+   <h1>Welcome, <%= current_user.name %>!</h1>
    <%= image_tag current_user.avatar.url(:thumb), :class => "round-image-50" %>
    <ul class="circle">
      <li><h4><%= link_to "View Your Posts", posts_path(@user), :class => "redHover" %></h4></li>

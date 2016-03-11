@@ -5,6 +5,11 @@ class PostsController < ApplicationController
     @user = User.find(current_user)
   end
 
+  def body 
+    @post = Post.find(params[:id])
+    render plain: @post.content
+  end
+
   def new
     @post = Post.new # instantiating a post Post
 
@@ -35,8 +40,18 @@ class PostsController < ApplicationController
     redirect_to post_path(@post)
   end
 
+  # def show 
+  #   @post = Post.find(params[:id]) 
+  # end
+
   def show 
-    @post = Post.find(params[:id]) 
+    # @user = User.find(params[:user_id])
+    # @post = @user.posts.find(params[:id])
+    @post = Post.find(params[:id])
+    respond_to do |format|
+      format.html { render :show }
+      format.json { render json: @post}
+    end
   end
 
   def destroy
