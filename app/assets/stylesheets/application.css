@@ -17,18 +17,34 @@
 
  /*    NAV BAR        */
 
+ .btn-primary:hover {
+  background-color: red;
+  font-size: 15px;
+ }
+
+ .btn-danger {
+  font-size: 30px;
+  text-decoration: none;
+  margin-left: 10px;
+  text-align: center;
+  display: inline-block;
+  padding: 2px;
+ }
+
  .js-more:hover {
   background-color: green;
  }
  
 #navbar {
-background: #283048; /* fallback for old browsers */
-background: -webkit-linear-gradient(to left, #283048 , #859398); /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to left, #283048 , #859398); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
+
+background: #4B79A1; /* fallback for old browsers */
+background: -webkit-linear-gradient(to left, #4B79A1 , #283E51); /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to left, #4B79A1 , #283E51); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        
 height: 100px;
 
-font-size: 25px;
+/*font-size: 25px;*/
 
 
 display: -webkit-flex; /* Safari */
@@ -38,19 +54,18 @@ display: -webkit-flex; /* Safari */
       
 }
 
-.nav_btn {
+/*.nav_btn {
   border: 2px solid;
   border-radius: 2px;
   padding: 2px;
   text-decoration: none;
-  /*background-color: ;*/
   color: navy;
 }
 
 .nav_btn:hover {
         background-color: #134E5E;
         background-color:#71B280;
-}
+}*/
 
 /*   END NAV BAR   */
 
@@ -67,6 +82,15 @@ background: linear-gradient(to left, #757F9A , #D7DDE8); /* W3C, IE 10+/ Edge, F
 
 .circle {
   list-style-type: circle;
+  text-decoration: none;
+}
+
+.catList {
+  font-size: 14px;
+}
+
+.noUnd {
+  text-decoration: none;
 }
 
 /* Index Page list hover color */

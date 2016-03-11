@@ -1,14 +1,14 @@
    <h1>Welcome, <%= current_user.name %>!</h1>
    <%= image_tag current_user.avatar.url(:thumb), :class => "round-image-50" %>
    <ul class="circle">
-     <li><h4><%= link_to "View Your Posts", posts_path(@user), :class => "redHover" %></h4></li>
-     <li><h4><%= link_to "New Post", new_post_path(current_user), :class => "redHover" %></h4></li>
-     <li><h4><%= link_to "View Categories", categories_path, :class => "redHover" %>  </h4></li>
-     <li><h4><%= link_to "View All Posts", all_index_path, :class => "redHover" %>
-     <li><h4><%= link_to "Edit Account", edit_user_registration_path, :class => "redHover" %></h4></li>
+     <li><h4><%= link_to "View Your Posts", posts_path(@user), :class => "redHover noUnd" %></h4></li>
+     <li><h4><%= link_to "New Post", new_post_path(current_user), :class => "redHover noUnd" %></h4></li>
+     <li><h4><%= link_to "View Categories", categories_path, :class => "redHover noUnd" %>  </h4></li>
+     <li><h4><%= link_to "View All Posts", all_index_path, :class => "redHover noUnd" %>
+     <li><h4><%= link_to "Edit Account", edit_user_registration_path, :class => "redHover noUnd" %></h4></li>
     </ul>
 <% if current_user.admin? %>
-<ul class="cirlce">
- <li> <h4><%= link_to "Create Category", new_category_path, :class => "adminLink" %><br></h4></li>
+<ul>
+ <li class="circle"> <h4><%= link_to "Create Category", new_category_path, :class => "adminLink noUnd" %><br></h4></li>
 </ul>
 <% end %>

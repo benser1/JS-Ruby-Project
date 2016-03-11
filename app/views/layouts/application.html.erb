@@ -15,10 +15,11 @@
    <%= content_tag(:div, flash[:notice], :id => "flash_notice") if flash[:notice] %>
    <%= content_tag(:div, flash[:alert], :id => "flash_alert") if flash[:alert] %>
    <% if user_signed_in? %>
-   <div id="navbar">
-   <%= link_to "Home", user_path(current_user), {:class => "nav_btn"} %> -
-   <%= link_to "View Categories", categories_path, {:class => "nav_btn"} %> -
-   <%= link_to "Log Out", destroy_user_session_path, :class => "nav_btn", :method => :delete %> 
+   <div class="nav nav-justified" id="navbar">
+   <%= link_to "Home", user_path(current_user), {:class => "btn btn-danger"} %>
+   <%= link_to "View Categories", categories_path, {:class => "btn btn-danger"} %>
+   <%= link_to "Log Out", destroy_user_session_path, :class => "btn btn-danger", :method => :delete %> 
+
    </div>
   <% end %>
    
