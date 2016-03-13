@@ -8,13 +8,7 @@
   <%= f.text_area :content, :required => true, :cols => "50", :rows => "10", :class => "content_box" %> <br>
 
   <br><%= f.label "Category:" %><br>
-  <%= select_tag :category_id, options_from_collection_for_select(Category.all, :id, :name), :class => "content_box" %> <br>
-
-  <%= f.fields_for :categories do |cat| %>
-    <%= cat.label :name %>
-    <%= cat.text_field :name %>
-  <% end %>
-
+  <%= select_tag :category_id, options_from_collection_for_select(Category.all, :id, :name, @post.category_id), :class => "content_box" %> <br>
   
   <!-- Nest to create a new category -->
 

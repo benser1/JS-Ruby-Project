@@ -12,7 +12,6 @@ class PostsController < ApplicationController
 
   def new
     @post = Post.new # instantiating a post Post
-    @post.categories.build
 
     # how does it render that form?
     # what's the implict rendering convention of rails?
@@ -30,7 +29,6 @@ class PostsController < ApplicationController
 
   def edit
     @post = Post.find(params[:id])
-    @post.categories.build
   end
 
   def update 
@@ -49,7 +47,6 @@ class PostsController < ApplicationController
   def show 
     # @user = User.find(params[:user_id])
     # @post = @user.posts.find(params[:id])
-    # @category = Category.find(params[:id])
     @post = Post.find(params[:id])
     respond_to do |format|
       format.html { render :show }
@@ -65,7 +62,7 @@ class PostsController < ApplicationController
   private 
 
   def post_params
-    params.require(:post).permit(:title, :content, categories_attributes: [:id, :name])
+    params.require(:post).permit(:title, :content, :category_id, :category_name)
   end
 
 end ## class end

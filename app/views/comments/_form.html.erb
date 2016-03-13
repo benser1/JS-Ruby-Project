@@ -1,7 +1,5 @@
 <%= form_for [@post, @post.comments.build] do |f| %>
 
-   <strong><%= f.label "Name:" %></strong><br>
-   <%= f.text_field :name, required: true %><br><br>
 
    <strong><%= f.label "Comment:" %></strong><br>
    <%= f.text_area :content, required: true %><br><br>

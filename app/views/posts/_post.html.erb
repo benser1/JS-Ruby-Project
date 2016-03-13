@@ -3,7 +3,7 @@
     <li><%= link_to post.title, post_path(post), :class => "redHover"%>
     <div id="body-<%= post.id %>"><%= truncate post.content %></div>
     <button class="js-more" data-id="<%= post.id %>">More...</button><br></li>
-<br><% end %>
+<% end %>
 </ul>
 
 <button class="btn btn-primary" id="loadMore">Load More</button>
