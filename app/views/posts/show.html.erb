@@ -1,8 +1,7 @@
-<h1>Post Title: <%=@post.title%></h1>
+<h1 class="showTitle"><%=@post.title%></h1>
 
-<h3><%= @post.title %> </h3>
-<p><em><%= last_updated @post %></em></p>
-<em>Written by: <strong><%= @post.user.name %></strong></em>
+<p class="showTitle"><em>Written by: <strong><%= @post.user.name %></strong></em></p>
+<p class="showTitle"><em><strong><%= last_updated @post %></strong></em></p>
 <p> <%= @post.content %> </p>
 
 <%= link_to Category.find_by_id(@post.category_id).name, category_path(Category.find_by_id(@post.category_id))%> - 

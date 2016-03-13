@@ -1,4 +1,4 @@
-   <h1>Welcome, <%= current_user.name %>!</h1>
+<br>
    <%= image_tag current_user.avatar.url(:thumb), :class => "round-image-50" %>
    <ul class="circle">
      <li><h4><%= link_to "View Your Posts", posts_path(@user), :class => "redHover noUnd" %></h4></li>
@@ -12,3 +12,4 @@
  <li class="circle"> <h4><%= link_to "Create Category", new_category_path, :class => "adminLink noUnd" %><br></h4></li>
 </ul>
 <% end %>
+

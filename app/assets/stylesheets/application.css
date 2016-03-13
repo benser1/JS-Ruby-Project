@@ -23,7 +23,7 @@
  }
 
  .btn-danger {
-  font-size: 30px;
+  font-size: 26px;
   text-decoration: none;
   margin-left: 10px;
   text-align: center;
@@ -34,6 +34,14 @@
  .js-more:hover {
   background-color: green;
  }
+
+ .navH1 {
+  color: white;
+  display: inline-block;
+  font-size: 38px;
+  padding-left: 10%;
+
+}
  
 #navbar {
 
@@ -232,6 +240,14 @@ background: linear-gradient(to left, #757F9A , #D7DDE8); /* W3C, IE 10+/ Edge, F
     text-align: center;
     img { width: 100% }
 }
+
+/*   Show Page Posts  */
+
+.showTitle {
+  text-align: center;
+}
+
+
 
 
 
