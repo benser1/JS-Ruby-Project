@@ -11,11 +11,7 @@ class PostsController < ApplicationController
   end
 
   def new
-    @post = Post.new # instantiating a post Post
-
-    # how does it render that form?
-    # what's the implict rendering convention of rails?
-    # render '/posts/new'
+    @post = Post.new # instantiating a post
   end
 
   def create
@@ -40,13 +36,7 @@ class PostsController < ApplicationController
     redirect_to post_path(@post)
   end
 
-  # def show 
-  #   @post = Post.find(params[:id]) 
-  # end
-
   def show 
-    # @user = User.find(params[:user_id])
-    # @post = @user.posts.find(params[:id])
     @post = Post.find(params[:id])
     respond_to do |format|
       format.html { render :show }
